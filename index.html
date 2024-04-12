@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tax Calculator</title>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+  <form id="taxForm">
+    <div>
+      <label for="grossIncome">Enter gross annual income</label>
+      <span class="info-icon" id="gross" title="Gross annual income is your total salary in a year before any deductions">?</span>
+      <input type="text" id="grossIncome" placeholder="Enter gross annual income">
+      <span class="error-icon" title="Please enter numbers only">!</span>
+    </div>
+    <div>
+      <label for="extraIncome">Enter extra income</label>
+      <span class="info-icon" id="gross" title="Extra income is income apart from gross annual income">?</span>
+      <input type="text" id="extraIncome" placeholder="Enter extra income from other sources">
+      <span class="error-icon" title="Please enter numbers only">!</span>
+    </div>
+    <div>
+      <label for="ageGroup">Enter age group</label>
+      <span class="info-icon" id="gross" title="Age Group must be selected from given age group only">?</span>
+      <select id="ageGroup">
+        <option value="">Select age group</option>
+        <option value="<40">< 40</option>
+        <option value=">=40 & <60">≥ 40 & < 60</option>
+        <option value=">=60">≥ 60</option>
+      </select>
+      <span class="error-icon" title="This field is mandatory">!</span>
+    </div>
+    <div>
+      <label for="deductions">Enter total applicable deductions</label>
+      <span class="info-icon" id="gross" title="Gross annual income is your total salary in a year before any deductions">?</span>
+      <input type="text" id="deductions" placeholder="Add total applicable deductions">
+      <span class="error-icon" title="Please enter numbers only">!</span>
+    </div>
+    <button type="button" class="submit-btn" onclick="calculateTax()">Submit</button>
+  </form>
+</div>
+
+<!-- The Modal -->
+<div id="resultModal" class="modal">
+  <div class="modal-content">
+    
+    <p id="resultText">Your overall income will be XXXXX after tax deductions</p>
+
+    <button type="button" class="modal-close-btn" onclick="closeModal()">Close</button>
+  </div>
+</div>
+<script src="script.js"></script>
+
+
+
+</body>
+</html>
